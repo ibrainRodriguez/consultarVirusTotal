@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #f6f7fb;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0056b3;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+label {
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  outline: none;
+  resize: vertical;
+}
+
+textarea {
+  height: 160px;
+}
+
+button {
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #005fd1;
+}
+
+.textoIngresa {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.botonAnalizar {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+
+.small.muted {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.resultados {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.resultado {
+  background: #f9fafc;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  word-break: break-word;
+}
+
+.resultado:hover {
+  transform: scale(1.02);
+}
+
+.resultado h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resultado p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/*Para mostrar el resultado correctamente*/
+.resultado pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

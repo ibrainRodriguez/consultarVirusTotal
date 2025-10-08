@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta pagina es un proyecto para consultar la API de VirusTotal v3">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Consulta VirusTotal</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Analizador de VirusTotal</h1>
+    
+        <div class="control">
+          <label for="apiKey">Introduce tu Clave:</label>
+          <input id="apiKey" type="password" placeholder="Tu clave de VirusTotal v3" />
+          <button id="guardarApi">Guardar clave</button>
+          <p id="keyMsg" class="small muted">No se guarda en servidor—solo sesión.</p>
+        </div>
+    
+        <p class="textoIngresa">Ingresa tus IoCs:</p>
+
+        <textarea id="iocList" placeholder="Ejemplo:
+8c6976e5b5410415bde908bd4dee15dfb16c2c2b
+8.8.8.8
+example.com
+https://malicioso.com"></textarea>
+
+        <div class="botonAnalizar">
+            <button id="btnAnalizar">Analizar</button>
+        </div>
+        
+        <div id="resultados" class="resultados"></div>
+    
+    </div>
+    
+    <script src="./assets/js/script.js"></script>          
+</body>
+</html>
